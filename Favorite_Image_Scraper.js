@@ -2,6 +2,7 @@ javascript:void(!function () {
 
 
 	$('.bread-crumb').append(`<div id="modal"><h1 id="modalTitle">Welcome to rS Image Selector</h1><p>Click on any of your favorite images to get the source link in a new tab.  When you're finished just refresh the page and rS.com's original functionality will be restored. </p><button id="closeModal">Got It</button></div>`);
+	
 	$('#modal').css({
 	    "width": "50%",
 	    "position": "absolute",
@@ -19,7 +20,12 @@ javascript:void(!function () {
 	});
 
 	$('#closeModal').click(function() {
-		$('#modal').hide();
+		$('#modal').remove();
+	});
+
+	$('#closeModal').css({
+		"border": "1px solid black",
+		"width": "10%"
 	});
 	
 	console.log("Welcome to rS Image Selector. Click on any of your favorite images to get the source link in a new tab.  When you're finished just refresh the page and rS.com's original functionality will be restored.");
