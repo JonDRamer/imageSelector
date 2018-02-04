@@ -1,28 +1,28 @@
 javascript:void(!function () { 
 
-	$('div.favorite-search.standard-page__panel.rs-form').append(`<div id="modal"><p id="modalTitle">Welcome to rS Image Selector</p>Click on any of your favorite images to get the source link in a new tab.  When you're finished just refresh the page and rS.com's original functionality will be restored.</div>`);
+
+	$('.bread-crumb').append(`<div id="modal"><h1 id="modalTitle">Welcome to rS Image Selector</h1><p>Click on any of your favorite images to get the source link in a new tab.  When you're finished just refresh the page and rS.com's original functionality will be restored. </p><button id="closeModal">Got It</button></div>`);
 	$('#modal').css({
-		"align-items": "center",
 	    "width": "50%",
-	    "height": "20%",
 	    "position": "absolute",
 	    "left": "25%",
 	    "z-index": 1,
-	    "display": "flex",
-	    "flex-wrap": "wrap",
 	    "box-shadow": "rgba(0, 0, 0, 0.3) 0px 0px 10px",
 	    "text-align": "center",
-	    "font-family": "inherit",
-	    "font-weight": "900",
-	    "padding": "5px",
+	    "padding": "7px",
 	    "background": "#fff"
 	});
 
 	$('#modalTitle').css({
-		"margin": "0px"
+		"font-size": "12px",
+		"font-weight": "600"
+	});
+
+	$('#closeModal').click(function() {
+		$('#modal').hide();
 	});
 	
-	console.log("Click on any of your favorites thumbnail image and the link will be printed below.");
+	console.log("Welcome to rS Image Selector. Click on any of your favorite images to get the source link in a new tab.  When you're finished just refresh the page and rS.com's original functionality will be restored.");
 
 	collectAndBindProductImages();
 
@@ -50,6 +50,3 @@ javascript:void(!function () {
 	}
 
 }());	
-
-alert("Click on any of your favorite images to get the link in a new tab.  When you're all done just refresh the page and the site's usual functionality will be restored.");
-
