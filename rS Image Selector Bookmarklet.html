@@ -1,64 +1,69 @@
-<a href="javascript:void(!function () { 
-	
-	$('.bread-crumb').append(`<div id='modal'><h1 id='modalTitle'>Welcome to rS Image Selector</h1><p>Click on any of your favorite images to get the source link in a new tab.  When you're finished just refresh the page and rS.com's original functionality will be restored. </p><button id='closeModal'>Got It</button></div>`);
+<div>
 
-	$('#modal').css({
-	    'width': '25%',
-	    'position': 'absolute',
-	    'left': '37.5%',
-	    'z-index': 1,
-	    'box-shadow': 'rgba(0, 0, 0, 0.3) 0px 0px 10px',
-	    'text-align': 'center',
-	    'padding': '50px',
-	    'background': '#fff'
-	});
+	<a href="javascript:void(!function () { 
+		
+		$('.bread-crumb').append(`<div id='modal'><h1 id='modalTitle'>Welcome to rS Image Selector</h1><p>Click on any of your favorite images to get the source link in a new tab.  When you're finished just refresh the page and rS.com's original functionality will be restored. </p><button id='closeModal'>Got It</button></div>`);
 
-	$('#modalTitle').css({
-		'font-size': '12px',
-		'font-weight': '600'
-	});
+		$('#modal').css({
+		    'width': '25%25',
+		    'position': 'absolute',
+		    'left': '37.5%25',
+		    'z-index': 1,
+		    'box-shadow': 'rgba(0, 0, 0, 0.3) 0px 0px 10px',
+		    'text-align': 'center',
+		    'padding': '50px',
+		    'background': '#fff'
+		});
 
-	$('#closeModal').click(function() {
-		$('#modal').remove();
-	});
+		$('#modalTitle').css({
+			'font-size': '12px',
+			'font-weight': '600'
+		});
 
-	$('#closeModal').css({
-		'border': '1px solid black',
-		'padding-left': '10px',
-		'padding-right': '10px'
-	});
-	
-	
-	console.log('Welcome to rS Image Selector. Click on any of your favorite images to get the source link in a new tab.  When you are finished just refresh the page to exit image selection mode.  Your links will also be printed here in the console for your convenience.');
+		$('#closeModal').click(function() {
+			$('#modal').remove();
+		});
 
-	collectAndBindProductImages();
+		$('#closeModal').css({
+			'border': '1px solid black',
+			'padding-left': '10px',
+			'padding-right': '10px'
+		});
+		
+		
+		console.log('Welcome to rS Image Selector. Click on any of your favorite images to get the source link in a new tab.  When you are finished just refresh the page to exit image selection mode.  Your links will also be printed here in the console for your convenience.');
 
-	$(window).scroll(function() {
+		collectAndBindProductImages();
 
-	    clearTimeout($.data(this, 'scrollTimer'));
+		$(window).scroll(function() {
 
-	    $.data(this, 'scrollTimer', setTimeout(function() {
-	        collectAndBindProductImages();
-	    }, 100));
+		    clearTimeout($.data(this, 'scrollTimer'));
 
-	});
-	
-	function collectAndBindProductImages() {
+		    $.data(this, 'scrollTimer', setTimeout(function() {
+		        collectAndBindProductImages();
+		    }, 100));
 
-		$('.product-image').off('click').on('click', (function(e) {
+		});
+		
+		function collectAndBindProductImages() {
 
-			var url = e.target.attributes.style.value.split('//')[1].replace(')', '');
+			$('.product-image').off('click').on('click', (function(e) {
 
-			setTimeout(function() {
-				console.log($('.product-details__title').text() + '\nLINK: ', 'https://' + url);
-				window.open('https://' + url);
-				$('product-modal').hide();
-			}, 100);
+				var url = e.target.attributes.style.value.split('//')[1].replace(')', '');
 
-		}));
+				setTimeout(function() {
+					console.log($('.product-details__title').text() + '\nLINK: ', 'https://' + url);
+					window.open('https://' + url);
+					$('product-modal').hide();
+				}, 100);
 
-	}
+			}));
 
-}());	
-">
-<img src="https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/70/18/ce/7018cee6-a85c-43c0-a0f9-5a9d1fa9d2c7/mzl.rgbljmek.png/246x0w.jpg" alt="rS Image Selector"></a>
+		}
+
+	}());	
+	">
+		<img src="https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/70/18/ce/7018cee6-a85c-43c0-a0f9-5a9d1fa9d2c7/mzl.rgbljmek.png/246x0w.jpg" alt="rS Image Selector">
+	</a>
+
+</div>
