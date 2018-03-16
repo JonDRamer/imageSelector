@@ -1,65 +1,69 @@
 <a href="javascript:void(!function () { 
 	
-		$('.bread-crumb').append(`<div id='modal'><h1 id='modalTitle'>Welcome to rS Image Selector</h1><p>Click on any of your favorite images to get the source link in a new tab.  When you're finished just refresh the page and rS.com's original functionality will be restored. </p><button id='closeModal'>Got It</button></div>`);
+	$('.bread-crumb').append(`<div id='modal'><h1 id='modalTitle'>Welcome to rewardStyle Image Selector</h1><p>Click on the image you want to save. A new tab will open where you're able to save the desired image. Refresh the page to restore rewardStyle.com's original functionality.</p><button id='closeModal'>Got It</button><p>Stay tuned for new product updates, including a long-term solution to save Product and Favorite images.</p></div>`);
 
-		$('#modal').css({
-		    'width': '25%25',
-		    'position': 'absolute',
-		    'left': '37.5%25',
-		    'z-index': 1,
-		    'box-shadow': 'rgba(0, 0, 0, 0.3) 0px 0px 10px',
-		    'text-align': 'center',
-		    'padding': '50px',
-		    'background': '#fff'
-		});
+	$('#modal').css({
+	    'width': '35%25',
+	    'position': 'absolute',
+	    'left': '30.5%25',
+	    'z-index': 1,
+	    'box-shadow': 'rgba(0, 0, 0, 0.3) 0px 0px 10px',
+	    'text-align': 'center',
+	    'padding': '40px',
+	    'background': '#fff',
+	    'color': 'black'
+	});
 
-		$('#modalTitle').css({
-			'font-size': '12px',
-			'font-weight': '600'
-		});
+	$('#modalTitle').css({
+		'font-size': '12px',
+		'font-weight': '600'
+	});
 
-		$('#closeModal').click(function() {
-			$('#modal').remove();
-		});
+	$('#closeModal').click(function() {
+		$('#modal').remove();
+	});
 
-		$('#closeModal').css({
-			'border': '1px solid black',
-			'padding-left': '10px',
-			'padding-right': '10px'
-		});
-		
-		
-		console.log('Welcome to rS Image Selector. Click on any of your favorite images to get the source link in a new tab.  When you are finished just refresh the page to exit image selection mode.  Your links will also be printed here in the console for your convenience.');
+	$('#closeModal').css({
+		'background': 'black',
+		'color': 'white',
+		'border': '1px solid black',
+		'padding': '5px 15px',
+		'margin': '10px'
+	});
+	
+	
+	console.log('Welcome to rewardStyle Image Selector. Click on any of your favorite images to get the source link in a new tab.  When you are finished just refresh the page to exit image selection mode.  Your links will also be printed here in the console for your convenience.');
 
-		collectAndBindProductImages();
+	collectAndBindProductImages();
 
-		$(window).scroll(function() {
+	$(window).scroll(function() {
 
-		    clearTimeout($.data(this, 'scrollTimer'));
+	    clearTimeout($.data(this, 'scrollTimer'));
 
-		    $.data(this, 'scrollTimer', setTimeout(function() {
-		        collectAndBindProductImages();
-		    }, 100));
+	    $.data(this, 'scrollTimer', setTimeout(function() {
+	        collectAndBindProductImages();
+	    }, 100));
 
-		});
-		
-		function collectAndBindProductImages() {
+	});
+	
+	function collectAndBindProductImages() {
 
-			$('.product-image').off('click').on('click', (function(e) {
+		$('.product-image').off('click').on('click', (function(e) {
 
-				var url = e.target.attributes.style.value.split('//')[1].replace(')', '');
+			var url = e.target.attributes.style.value.split('//')[1].replace(')', '');
 
-				setTimeout(function() {
-					console.log($('.product-details__title').text() + '\nLINK: ', 'https://' + url);
-					window.open('https://' + url);
-					$('product-modal').hide();
-				}, 100);
+			setTimeout(function() {
+				console.log($('.product-details__title').text() + '\nLINK: ', 'https://' + url);
+				window.open('https://' + url);
+				$('product-modal').hide();
+			}, 100);
 
-			}));
+		}));
 
-		}
+	}
 
-	}());	
+}());	
+	
 	">
 
 	<img src="https://is3-ssl.mzstatic.com/image/thumb/Purple118/v4/70/18/ce/7018cee6-a85c-43c0-a0f9-5a9d1fa9d2c7/mzl.rgbljmek.png/246x0w.jpg" alt="rS Image Selector">
