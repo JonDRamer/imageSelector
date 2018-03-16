@@ -1,6 +1,6 @@
 javascript:void(!function () { 
 	
-	$('.bread-crumb').append(`<div id='modal'><h1 id='modalTitle'>Welcome to rewardStyle Image Selector</h1><p>Click on the image you want to save. A new tab will open where you're able to save the desired image. Refresh the page to restore rewardStyle.com's original functionality.</p><button id='closeModal'>Got It</button><p>Stay tuned for new product updates, including a long-term solution to save Product and Favorite images.</p></div>`);
+	$('.bread-crumb').append(`<div id='modal'><h1 id='modalTitle'>Welcome to rewardStyle Image Selector</h1><p>Click on the image you want to save. A new tab will open where you're able to save the desired image. Refresh the page to restore rewardStyle.com's original functionality.</p><button id='closeModal'>Ok</button><p>Stay tuned for new product updates, including a long-term solution to save Product and Favorite images.</p></div>`);
 
 	$('#modal').css({
 	    'width': '35%25',
