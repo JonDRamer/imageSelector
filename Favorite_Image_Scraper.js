@@ -1,6 +1,6 @@
 javascript:void(!function () { 
 	
-	$('.bread-crumb').append(`<div id='modal'><h1 id='modalTitle'>Welcome to rewardStyle Image Selector</h1><p>Click on the image you want to save. A new tab will open where you're able to save the desired image. Refresh the page to restore rewardStyle.com's original functionality.</p><button id='closeModal'>Ok</button><p>Stay tuned for new product updates, including a long-term solution to save Product and Favorite images.</p></div>`);
+	$('.bread-crumb').append(`<div id='modal'><img id='rSLogo' src='http://rstyleimg.s3.amazonaws.com/MKTG-Design/logo-01.png' alt='rewardStyle Logo'><h1 id='modalTitle'>Image Selector</h1><p>Click on the image you want to save. A new tab will open where you're able to save the desired image. Refresh the page to restore rewardStyle.com's original functionality.</p><button id='closeModal'>Ok</button><p>Stay tuned for new product updates, including a long-term solution to save Product and Favorite images.</p></div>`);
 
 	$('#modal').css({
 	    'width': '35%25',
@@ -12,6 +12,10 @@ javascript:void(!function () {
 	    'padding': '40px',
 	    'background': '#fff',
 	    'color': 'black'
+	});
+
+	$('#rSLogo').css({
+	    'width': '30%25',
 	});
 
 	$('#modalTitle').css({
@@ -63,4 +67,3 @@ javascript:void(!function () {
 	}
 
 }());	
-
